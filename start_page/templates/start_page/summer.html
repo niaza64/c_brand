@@ -5,7 +5,14 @@
         </head>
         <body>
             <div>
-                <h1>Welcome to Summer Collection</h1>
+                <h1>Cloths</h1>
+                <ul>
+                    {% for cloth in cloths %}
+                        <h2>{{cloth.name}}</h2>
+                        <li>Cloth Description: {{cloth.description}}</li>
+                        <li>Cloth Available: {{cloth.count}}</li>
+                    {% endfor %}
+                </ul>
             </div>
         </body>
     </html>
