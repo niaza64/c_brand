@@ -11,6 +11,11 @@
                         <h2>{{cloth.name}}</h2>
                         <li>Cloth Description: {{cloth.description}}</li>
                         <li>Cloth Available: {{cloth.count}}</li>
+                        <form action = "update/{{ cloth.name }}" method = "post">
+                            {% csrf_token %}
+                            {{form }}
+                            <input type="submit" value="Add to Cart">
+                        </form>
                     {% endfor %}
                 </ul>
             </div>
