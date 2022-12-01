@@ -16,7 +16,7 @@ def winter(request):
     return render(request, "start_page/winter.html")
 
 def add_to_cart(request, name):
-    cclothtype = cloth.objects.get(name=name)
+    clothtype = cloth.objects.get(name=name)
     clothtype.count -=  1
     clothtype.save()
     return HttpResponseRedirect(reverse('summer'))
