@@ -4,5 +4,5 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("summer", views.summer, name="summer"),
     path("winter", views.winter, name="winter"),
-    path('update/<str:name>', views.update, name='update')
+    path('add_to_cart/<str:name>', views.add_to_cart, name='add_to_cart')
 ]
