@@ -23,7 +23,7 @@ class Cart:
         the frontend to make a detail view with.
         """
         cart_list = []
-        print("za mara")
+    
 
         for name, val in self.cart.items():
             cart_list.append({
@@ -47,7 +47,6 @@ class Cart:
     def get_total_price(self):
         total = 0
         for name, val in self.cart.items():
-            print("zajnaskhdgauiwdh", val)
-            total += val['quantity'] * val['price']
+            total += int(val['quantity']) * int(val['price'])
         print("dasdafsdfasfasfasdfw csx")
         return total

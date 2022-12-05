@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import cloth, Cart
 from django.urls import reverse
-# Create your views here.
+
 def index(request):
     return render(request, "start_page/index.html")
 
@@ -22,7 +22,7 @@ def show_cart(request):
     print("lohgfhdfl", pr)
     return render(request, "start_page/cart.html", {
         "cart": cart,
-        "pr": pr
+        "pr": pr,
     })
 
 def add_to_cart(request, id):
